@@ -1,7 +1,8 @@
+import os
 import telebot
 from flask import Flask, request
 
-API_TOKEN = '7565366701:AAHX-tPCdUA8w6PEWYsKNZUWX2lF11Jui3Q'
+API_TOKEN = '7565366701:AAHX-tPCdUA8w6PEWYsKNZUWX2lF11Jui3Q'  # توكن البوت
 bot = telebot.TeleBot(API_TOKEN)
 server = Flask(__name__)
 
@@ -34,6 +35,6 @@ def index():
     return "البوت شغال تمام 🌐"
 
 if __name__ == "__main__":
-    bot.remove_webhook()
-    bot.set_webhook(url=f"https://your-render-app-name.onrender.com/{API_TOKEN}")
-    server.run(host="0.0.0.0", port=5000)
+    bot.remove_webhook()  # إزالة أي Webhook قديم
+    bot.set_webhook(url="https://apk-telegram-bot.onrender.com/7565366701:AAHX-tPCdUA8w6PEWYsKNZUWX2lF11Jui3Q")  # تعيين الـ Webhook الجديد
+    server.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
