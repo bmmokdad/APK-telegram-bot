@@ -53,14 +53,4 @@ def index():
 if __name__ == '__main__':
     bot.remove_webhook()
     bot.set_webhook(url='https://apk-telegram-bot.onrender.com')
-    app.run(host='0.0.0.0', port=5000)def index():
-    return "بوت التطبيقات شغال تمام!"
-
-# إعداد Webhook
-if __name__ == '__main__':
-    bot.remove_webhook()
-    bot.set_webhook(url='https://apk-telegram-bot.onrender.com')  # رابط الريندر
-    app.run(host='0.0.0.0', port=5000)if __name__ == "__main__":
-    bot.remove_webhook()  # إزالة أي Webhook قديم
-    bot.set_webhook(url="https://apk-telegram-bot.onrender.com/7565366701:AAHX-tPCdUA8w6PEWYsKNZUWX2lF11Jui3Q")  # تعيين الـ Webhook الجديد
-    server.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+    app.run(host='0.0.0.0', port=5000)
